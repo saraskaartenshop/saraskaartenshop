@@ -1,0 +1,213 @@
+/* KLEUREN */
+:root {
+    --blue: #1f3fdb;
+    --pink: #f2b4c9;
+    --white: #ffffff;
+    --black: #000000;
+    --font-main: 'Pacifico', sans-serif;
+}
+
+/* ALGEMEEN */
+body {
+    font-family: var(--font-main);
+    margin: 0;
+    padding: 0;
+    background-color: var(--white);
+    color: var(--black);
+    overflow-x: hidden;
+}
+
+/* PAGE WRAPPER VOOR GEHELE INHOUD (EXCLUSIEF HEADER & FOOTER) */
+.page-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    background-color: var(--blue);
+    padding: 20px 0;
+}
+
+.header-inner {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    height: 80px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: var(--pink);
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff0f5;
+    color: var(--blue);
+    width: 100%;
+}
+
+.hero h1 {
+    color: var(--blue);
+}
+
+/* CONTENT CONTAINER */
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* GALERIJ */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    border: 3px solid var(--pink);
+}
+
+/* ABOUT SECTION */
+.about-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-photo-right {
+    width: 230px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-top: 10px;
+}
+
+/* EXTRA FOTO'S OP OVER PAGINA */
+.about-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.about-gallery img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 3px solid var(--pink);
+}
+
+/* PRIJZEN BLOK */
+.pricing {
+    background-color: #fff7f0;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.pricing h3 {
+    margin-bottom: 15px;
+    color: #d2691e;
+    font-size: 1.5em;
+}
+
+.pricing ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.pricing li {
+    line-height: 1.8;
+    font-size: 1.1em;
+    position: relative;
+    padding-left: 30px;
+}
+
+.pricing li::before {
+    content: "💌";
+    position: absolute;
+    left: 0;
+}
+
+/* BESTEL KNOP */
+.btn-order {
+    display: inline-block;
+    background-color: #d2691e;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.btn-order:hover {
+    background-color: #b35213;
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    background-color: var(--blue);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+/* HOME PAGINA - 3 FOTO'S SECTIE */
+.home-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.home-gallery img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 3px solid var(--pink);
+}
+
+/* MOBIEL RESPONSIVE */
+@media (max-width: 768px) {
+    .home-gallery {
+        grid-template-columns: 1fr; /* foto's onder elkaar op kleinere schermen */
+    }
+}
